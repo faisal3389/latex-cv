@@ -1,0 +1,172 @@
+\documentclass{article}
+\usepackage[cm]{fullpage}
+\usepackage{color}
+\usepackage{hyperref}
+
+\hypersetup{breaklinks=true,%
+pagecolor=white,%
+colorlinks=true,%
+linkcolor=cyan,%
+urlcolor=MyDarkBlue}
+
+\definecolor{MyDarkBlue}{rgb}{0,0.0,0.45}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Formatting parameters  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newlength{\tabin}
+\setlength{\tabin}{1em}
+\newlength{\secsep}
+\setlength{\secsep}{0.1cm}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+\definecolor{contactgray}{gray}{0.3}
+\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Template Definitions  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\Plus{\texttt{+}}
+
+\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-6pt} \hrulefill \\ \vspace*{-15pt}}
+\newcommand{\name}[1]{\begin{center}\textsc{\Huge#1}\\\end{center}}
+\newcommand{\program}[1]{\begin{center}\textsc{#1}\end{center}}
+\newcommand{\contact}[1]{\begin{center}\color{contactgray}{\small#1}\end{center}}
+
+\newenvironment{tabbedsection}[1]{
+  \begin{list}{}{
+      \setlength{\itemsep}{0pt}
+      \setlength{\labelsep}{0pt}
+      \setlength{\labelwidth}{0pt}
+      \setlength{\leftmargin}{\tabin}
+      \setlength{\rightmargin}{\tabin}
+      \setlength{\listparindent}{0pt}
+      \setlength{\parsep}{0pt}
+      \setlength{\parskip}{0pt}
+      \setlength{\partopsep}{0pt}
+      \setlength{\topsep}{#1}
+    }
+  \item[]
+}{\end{list}}
+
+\newenvironment{nospacetabbing}{
+    \begin{tabbing}
+}{\end{tabbing}\vspace{-1.2em}}
+
+\newenvironment{resume_header}{}{\vspace{0pt}}
+
+
+\newenvironment{resume_section}[1]{
+  \filbreak
+  \vspace{2\secsep}
+  \textsc{\large#1}
+  \lineunder
+  \begin{tabbedsection}{\secsep}
+}{\end{tabbedsection}}
+
+\newenvironment{resume_subsection}[2][]{
+  \textbf{#2} \hfill {\footnotesize #1} \hspace{2em}
+  \begin{tabbedsection}{0.5\secsep}
+}{\end{tabbedsection}}
+
+\newenvironment{subitems}{
+  \renewcommand{\labelitemi}{-}
+  \begin{itemize}
+      \setlength{\labelsep}{1em}
+}{\end{itemize}}
+
+\newenvironment{resume_employer}[4]{
+  \vspace{\secsep}
+  \textbf{#1} \\ 
+  \indent {\small #2} \hfill {\footnotesize#3 (#4)}
+  \begin{tabbedsection}{0pt}
+  \begin{subitems}
+}{\end{subitems}\end{tabbedsection}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Start Document     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{resume_header}
+\name{Faisal Ali Siddiqui}
+\program{Software Developer}
+\contact{afaisal3389@gmail.com \hspace{2cm} 9951207401}
+\end{resume_header}
+
+\begin{resume_section}{Education}
+  \begin{resume_subsection}[Ropar, Punjab (2012--2016)]{Indian Institute of Technology}
+    \begin{subitems}
+      \item Bachelor of Technology (Electrical and Electronics Engineering)
+      \item CGPA: 7.81/10\
+    \end{subitems}
+  \end{resume_subsection}
+  
+\end{resume_section}
+
+\begin{resume_section}{Skills}
+  \begin{nospacetabbing}
+
+  \textbf{Frameworks} \= Angular 5, Node, Loopback, Express, Nativescript, Ionic, Qt \\*
+  \textbf{Languages}  \> JavaScript, C/C++, Python, Matlab, Shell Script \\*
+  \textbf{Tools} \> Git, Robomongo, Postman, CI tools\\*
+  \textbf{Interests} \> Mobile apps, FPGAs, Physics, Tennis\\*
+  \end{nospacetabbing}
+
+\end{resume_section}
+
+\begin{resume_section}{Work Experience}
+  \begin{resume_employer}{Capillary Technologies}{Software Development Engineer}{Bengaluru, KA}{May 2017 - Present}
+    \item Platform application for creating PWA apps for industrial clients
+    \item Developed PWA application for PizzaHut India, PizzaHut Kuwait, and KFC Saudi Arabia
+    \item Developed key modules like payment gateways, gift card services, order services e.t.c which are currently being used in brands PizzaHut global and KFC
+    \item Developed Hybrid mobile application for PizzaHut India using Ionic Framework
+  \end{resume_employer}
+  
+  \begin{resume_employer}{Flikster, Shibi Infolabs}{Software Developer}{Hyderabad, TG}{Nov 2016 - May 2017}
+    \item Developed Hybrid mobile apps using Nativescript for Flikster
+    \item Planned, developed and created CRM system for the content management in Flikster.
+    \item Developed backend infrastruture using Node, python for APIs and MongoDB for database.
+  \end{resume_employer}
+  
+  \begin{resume_employer}{Flikster, Shibi Infolabs}{Software Developer Intern}{Hyderabad, TG}{Aug 2016 - Nov 2016}
+    \item Developed web app for the fashion portal using MEAN stack
+    \item Wrote RESTFUL APIs using node and express
+  \end{resume_employer}
+  
+  \begin{resume_employer}{Microsemi}{Software Developer Intern}{Hyderabad, TG}{June 2015 - Aug 2015}
+    \item Migrated the SmartDebug tool from MFC to Qt for Microsemi for cross-platform support
+    \item Fixed Service Authorisation Requests filed by customers and the testing team for SmartFusion2 and IGLOO2 FPGA
+    \item Built new features in C\Plus\Plus\ \& Qt and resolved existing bugs to maintain and support product
+  \end{resume_employer}
+\end{resume_section}
+
+\begin{resume_section}{Projects and Extracurriculars}
+  \begin{resume_subsection}[(March 2014)]{Technex - IIT BHU techfest}
+  \begin{subitems}
+    \item Developed an autobot which uses Image Processing Technique to perform the given task
+    \item Implemented using MATLAB to generate the proper route for the bot and then the Microcontroller makes the bot to move through the acquired path
+    \end{subitems}
+  \end{resume_subsection}
+  
+  \begin{resume_subsection}{Achievements}
+  \begin{subitems}
+    \item Qualified for Merit-cum-Means scholarship at IIT Ropar for ranking in top 25\% in my
+branch
+    \item Representative of IIT-Ropar Alumni Association (Jan 2015 - June 2015)
+    \item Training and Placements Representative at IIT-Ropar (Jan 2015 - June 2015)
+    \item Organising member of Arturo IIT-Ropar Photography Club
+    \end{subitems}
+  \end{resume_subsection}
+\end{resume_section}
+
+\end{document}
+\grid
