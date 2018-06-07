@@ -2,4 +2,7 @@ faisal-latex.out
 faisal-latex.aux
 faisal-latex.dvi
 faisal-latex.log
+faisal-latex.fdb_latexmk
+faisal-latex.fls
+faisal-latex.synctex.gz
 faisal.pdf

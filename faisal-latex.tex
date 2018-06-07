@@ -27,6 +27,7 @@ urlcolor=MyDarkBlue}
 \setlength{\tabcolsep}{0in}
 
 \definecolor{contactgray}{gray}{0.3}
+\definecolor{myblue}{rgb}{0.0, 0.28, 0.67}
 \pagestyle{empty}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -36,7 +37,7 @@ urlcolor=MyDarkBlue}
 
 \newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-6pt} \hrulefill \\ \vspace*{-15pt}}
 \newcommand{\name}[1]{\begin{center}\textsc{\Huge#1}\\\end{center}}
-\newcommand{\program}[1]{\begin{center}\textsc{#1}\end{center}}
+\newcommand{\program}[1]{\begin{center}\color{myblue}\small{#1}\end{center}}
 \newcommand{\contact}[1]{\begin{center}\color{contactgray}{\small#1}\end{center}}
 
 \newenvironment{tabbedsection}[1]{
@@ -98,32 +99,32 @@ urlcolor=MyDarkBlue}
 
 \begin{resume_header}
 \name{Faisal Ali Siddiqui}
-\program{Software Developer}
+\program{Software Developer -- Electrical and Electronics Engineer Major -- Indian Institute of Technology, Ropar}
 \contact{afaisal3389@gmail.com \hspace{2cm} 9951207401}
 \end{resume_header}
 
-\begin{resume_section}{Education}
-  \begin{resume_subsection}[Ropar, Punjab (2012--2016)]{Indian Institute of Technology}
-    \begin{subitems}
-      \item Bachelor of Technology (Electrical and Electronics Engineering)
-      \item CGPA: 7.81/10\
-    \end{subitems}
-  \end{resume_subsection}
+% \begin{resume_section}{Education}
+%   \begin{resume_subsection}[Ropar, Punjab (2012--2016)]{Indian Institute of Technology}
+%     \begin{subitems}
+%       \item Bachelor of Technology (Electrical and Electronics Engineering)
+%       \item CGPA: 7.81/10\
+%     \end{subitems}
+%   \end{resume_subsection}
   
-\end{resume_section}
+% \end{resume_section}
 
-\begin{resume_section}{Skills}
+\begin{resume_section}{\color{myblue}About Me}
   \begin{nospacetabbing}
 
   \textbf{Frameworks} \= Angular 5, Node, Loopback, Express, Nativescript, Ionic, Qt \\*
   \textbf{Languages}  \> JavaScript, C/C++, Python, Matlab, Shell Script \\*
   \textbf{Tools} \> Git, Robomongo, Postman, CI tools\\*
-  \textbf{Interests} \> Mobile apps, FPGAs, Physics, Tennis\\*
+  \textbf{Interests} \> Mobile apps, Physics, Tennis\\*
   \end{nospacetabbing}
 
 \end{resume_section}
 
-\begin{resume_section}{Work Experience}
+\begin{resume_section}{\color{myblue}Work Experience}
   \begin{resume_employer}{Capillary Technologies}{Software Development Engineer}{Bengaluru, KA}{May 2017 - Present}
     \item Platform application for creating PWA apps for industrial clients
     \item Developed PWA application for PizzaHut India, PizzaHut Kuwait, and KFC Saudi Arabia
@@ -149,21 +150,28 @@ urlcolor=MyDarkBlue}
   \end{resume_employer}
 \end{resume_section}
 
-\begin{resume_section}{Projects and Extracurriculars}
+\begin{resume_section}{\color{myblue}Projects and Extracurriculars}
   \begin{resume_subsection}[(March 2014)]{Technex - IIT BHU techfest}
-  \begin{subitems}
-    \item Developed an autobot which uses Image Processing Technique to perform the given task
-    \item Implemented using MATLAB to generate the proper route for the bot and then the Microcontroller makes the bot to move through the acquired path
+    \begin{subitems}
+      \item Developed an autobot which uses Image Processing Technique to perform the given task
+      \item Implemented using MATLAB to generate the proper route for the bot and then the Microcontroller makes the bot to move through the acquired path
+    \end{subitems}
+  \end{resume_subsection}
+  
+  \begin{resume_subsection}{Positions of Responsibility}
+    \begin{subitems}
+      \item Managed UAT deployments and co-ordinated multiple bug bashes for in time release of Pizzahut PWA
+      \item Representative of IIT-Ropar Alumni Association (Jan 2015 - June 2015)
+      \item Training and Placements Representative at IIT-Ropar (Jan 2015 - June 2015)
+      \item Organising member of Arturo IIT-Ropar Photography Club
     \end{subitems}
   \end{resume_subsection}
   
   \begin{resume_subsection}{Achievements}
-  \begin{subitems}
-    \item Qualified for Merit-cum-Means scholarship at IIT Ropar for ranking in top 25\% in my
+    \begin{subitems}
+      \item IIT JEE – All India Rank 3443, was among the top 0.6\% of the students who appeared for IIT JEE in 2012
+      \item Qualified for Merit-cum-Means scholarship at IIT Ropar for ranking in top 25\% in my
 branch
-    \item Representative of IIT-Ropar Alumni Association (Jan 2015 - June 2015)
-    \item Training and Placements Representative at IIT-Ropar (Jan 2015 - June 2015)
-    \item Organising member of Arturo IIT-Ropar Photography Club
     \end{subitems}
   \end{resume_subsection}
 \end{resume_section}
